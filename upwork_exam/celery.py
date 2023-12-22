@@ -4,10 +4,10 @@ from celery import Celery
 from django.conf import settings
 
 # Set the default Django settings module for the 'celery' program.
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "up_work.settings.dev")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "upwork_exam.settings.dev")
 
 app = Celery(
-    "up_work",
+    "upwork_exam",
     backend=settings.CELERY_RESULT_BACKEND,
     broker=settings.BROKER_URL,
 )
